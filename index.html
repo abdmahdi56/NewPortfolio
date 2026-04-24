@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdullah Al Mahdi — Computer Science Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="img/logo.jpg" alt="AM Logo" class="nav-logo">
+        <span class="nav-name">Abdullah Al Mahdi</span>
+      </div>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi there, I'm</p>
+        <h1 class="hero-title">Abdullah Al Mahdi</h1>
+        <div class="hero-subtitle">
+          <span class="typing-text" id="typingText"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-description">
+          BSc student in Computer Science & Engineering at Leading University, passionate about competitive programming, problem-solving, and building impactful software solutions.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="resume.pdf" class="btn btn-secondary" download>
+            <i class="fas fa-download"></i> Resume
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="img/me.jpg" alt="Abdullah Al Mahdi">
+          
+          <div class="image-border"></div>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/abdmahdi56" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/abdullah-al-mahdi-02892b32a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://codeforces.com/profile/abdmahdi56" target="_blank" rel="noopener" aria-label="Codeforces">
+            
+            <i class="fa-solid fa-globe"></i>
+          </a>
+          <a href="https://www.codechef.com/users/abdmahdi56" target="_blank" rel="noopener" aria-label="CodeChef">
+            <i class="fa-solid fa-bowl-rice"></i>
+          </a>
+          <a href="https://web.facebook.com/abdullahalmahdi2006" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/@abdullahalmahdi2006" target="_blank" rel="noopener" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get to know me</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-content">
+          <p>I'm a passionate Computer Science and Engineering student at Leading University with a strong interest in software development and competitive programming. I thrive on turning complex problems into elegant solutions.</p>
+          
+          <p>My journey in tech started with competitive programming, where I've participated in various contests including the IEEE Junior Programming Contest. I love the challenge of optimizing algorithms and writing clean, efficient code.</p>
+          
+          <p>Beyond coding, I'm actively involved in student organizations and enjoy contributing to tech communities. I believe in continuous learning and sharing knowledge with others through my projects and tutorials.</p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3.96</span>
+              <span class="stat-label">Current CGPA</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">Top 10</span>
+              <span class="stat-label">IEEE Contest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-education">
+          <h3 class="subsection-title">Education</h3>
+          
+          <div class="education-item">
+            <div class="edu-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="edu-content">
+              <h4>BSc in Computer Science & Engineering</h4>
+              <p class="edu-institution">Leading University</p>
+              <p class="edu-year">2023 - 2027 (Ongoing)</p>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="edu-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="edu-content">
+              <h4>Higher Secondary Certificate (HSC)</h4>
+              <p class="edu-institution">Shahjalal Jameya Islamiya Kamil Madrasha</p>
+              <p class="edu-year">2023 • Science • GPA 4.75</p>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="edu-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="edu-content">
+              <h4>Secondary School Certificate (SSC)</h4>
+              <p class="edu-institution">Shahjalal Jameya Islamiya Kamil Madrasha</p>
+              <p class="edu-year">2021 • Science • GPA 4.67</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What I've built</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card featured">
+          <div class="project-image">
+            <div class="project-overlay"></div>
+            <i class="fas fa-users-cog project-icon"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Data Structures</span>
+            </div>
+            <h3 class="project-title">Student Management System</h3>
+            <p class="project-description">
+              A console-based Student Management System built in C++ using linked lists. Features include adding, deleting, searching, updating, and displaying student records dynamically with efficient memory management.
+            </p>
+            <a href="https://github.com/abdmahdi56/Student-Management-System-By-Linklist" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-overlay"></div>
+            <i class="fas fa-calculator project-icon"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Utility</span>
+            </div>
+            <h3 class="project-title">CGPA Calculator</h3>
+            <p class="project-description">
+              A simple yet efficient C++ program designed to calculate CGPA for university students, making grade tracking easier and more accurate.
+            </p>
+            <a href="https://github.com/abdmahdi56/CGPA-calculator" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-overlay"></div>
+            <i class="fas fa-tower-broadcast project-icon"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Recursion</span>
+            </div>
+            <h3 class="project-title">Tower of Hanoi</h3>
+            <p class="project-description">
+              A recursive Tower of Hanoi solver demonstrating the power of recursion and mathematical problem-solving through elegant code.
+            </p>
+            <a href="https://github.com/abdmahdi56/Tower-Of-Hanoi" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-overlay"></div>
+            <i class="fas fa-list project-icon"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">C</span>
+              <span class="tag">Arrays</span>
+            </div>
+            <h3 class="project-title">Array Operations in C</h3>
+            <p class="project-description">
+              Implementation of fundamental array operations including insert, delete, and search with optimized algorithms.
+            </p>
+            <a href="https://github.com/abdmahdi56/Array_Operations_C" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <div class="project-overlay"></div>
+            <i class="fas fa-th project-icon"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">C</span>
+              <span class="tag">Mathematics</span>
+            </div>
+            <h3 class="project-title">Matrix Operations</h3>
+            <p class="project-description">
+              Efficient implementation of matrix addition, subtraction, and multiplication with clean logic and error handling.
+            </p>
+            <a href="https://github.com/abdmahdi56/Matrix-operation" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">My expertise</span>
+        <h2 class="section-title">Skills & Achievements</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Technical Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Competitive Programming</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Microsoft Office</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Soft Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Teamwork</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="category-icon">
+            <i class="fas fa-language"></i>
+          </div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Bangla</span>
+            <span class="skill-tag">English</span>
+            <span class="skill-tag">Arabic</span>
+            <span class="skill-tag">Hindi</span>
+            <span class="skill-tag">Urdu</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="achievements">
+        <h3 class="subsection-title">Achievements</h3>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-content">
+              <h4>IEEE Junior Programming Contest</h4>
+              <p>Top 10 • 2025</p>
+              <a href="docs/IEEE Junior Contest Certificate.pdf" target="_blank" class="cert-link">
+                <i class="fas fa-certificate"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="achievement-content">
+              <h4>Intro to Programming (Python)</h4>
+              <p>Kaggle • 2025</p>
+              <a href="docs/Abdullah Al Mahdi - Intro to Programming.png" target="_blank" class="cert-link">
+                <i class="fas fa-certificate"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="achievement-content">
+              <h4>Kishorkantha Merit Scholarship</h4>
+              <p>General • 2019</p>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-microphone"></i>
+            </div>
+            <div class="achievement-content">
+              <h4>IEEE Talk Series</h4>
+              <p>Participant • 2025</p>
+              <a href="docs/IEEE Talk series certificate.pdf" target="_blank" class="cert-link">
+                <i class="fas fa-certificate"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <div class="achievement-content">
+              <h4>Tech Storm 5</h4>
+              <p>Volunteering • 2024</p>
+              <a href="img/Tech storm 5 certificate.jpg" target="_blank" class="cert-link">
+                <i class="fas fa-certificate"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-content">
+              <h4>Shohid Belal Cup</h4>
+              <p>Man of the Tournament • 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobbies">
+        <h3 class="subsection-title">Hobbies & Interests</h3>
+        <div class="hobbies-grid">
+          <div class="hobby-card">
+            <i class="fas fa-football-ball"></i>
+            <h4>Sports</h4>
+            <p>Cricket, Football, Badminton</p>
+          </div>
+          <div class="hobby-card">
+            <i class="fas fa-book-reader"></i>
+            <h4>Reading</h4>
+            <p>Fiction, Science, Technology, Biography</p>
+          </div>
+          <div class="hobby-card">
+            <i class="fas fa-plane"></i>
+            <h4>Traveling</h4>
+            <p>Exploring new places, Cultural experiences</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Let's connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <a href="mailto:abdullahalmahdi2006@gmail.com">abdullahalmahdi2006@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <a href="tel:+8801784251885">+880 1784-251885</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>Sylhet, Bangladesh</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://github.com/abdmahdi56" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/abdullah-al-mahdi-02892b32a/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://web.facebook.com/abdullahalmahdi2006" target="_blank" rel="noopener">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/@abdullahalmahdi2006" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/xqaydner" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+  <div class="visitor-counter">
+    <i class="fas fa-eye"></i>
+    <span>Visitor Count: <strong id="visitorCount">Loading...</strong></span>
+  </div>
+  <p>&copy; <span id="year"></span> Abdullah Al Mahdi. All Rights Reserved.</p>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

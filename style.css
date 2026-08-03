@@ -133,10 +133,13 @@ body.light-mode .nav {
 }
 
 .nav-name {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: none;
+color: var(--white, #ffffff);
+font-weight: bold;
+-webkit-background-clip: initial;
+-webkit-text-fill-color: initial;
+background-clip: initial;
+
 }
 
 .nav-toggle {

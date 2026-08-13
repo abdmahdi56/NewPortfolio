@@ -4,6 +4,7 @@
 
 const typingTexts = [
   "A Passionate CSE Student 💻",
+  "2★ in CodeChef",
   "A Competitive Programmer 🏆",
   "A Problem Solver 🔍",
   "A Lifelong Learner 📚"

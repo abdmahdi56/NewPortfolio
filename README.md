@@ -4,7 +4,7 @@ This is my personal portfolio website where I showcase my projects, skills, and 
 
 ## 🚀 Live Demo
 
-👉 [View Website](https://portfolioofmahdi.netlify.app)
+👉 [View Website](https://abdmahdi.tech)
 
 ## 🛠️ Technologies Used
 

@@ -15,7 +15,8 @@
   
   --text-primary: #F8FAFC;
   --text-secondary: #CBD5E1;
-  --text-muted: #94A3B8;
+  /* raised from #94A3B8 to pass WCAG AA on dark backgrounds */
+  --text-muted: #A8B8CC;
   
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -33,6 +34,76 @@
   /* Transitions */
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--primary);
+  color: var(--bg-primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Global focus-visible ring */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Remove default outline only when not keyboard-navigating */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-greeting,
+  .hero-title,
+  .hero-subtitle,
+  .hero-description,
+  .hero-cta,
+  .hero-image {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .cursor {
+    animation: none !important;
+  }
+
+  .image-border {
+    animation: none !important;
+  }
+
+  .scroll-indicator {
+    animation: none !important;
+  }
 }
 
 /* Light Mode */
@@ -756,8 +827,8 @@ background-clip: initial;
   margin-bottom: 1.5rem;
 }
 
-.skill-category h3 {
-  font-size: 1.5rem;
+.skill-category-title {
+  font-size: 1.25rem;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
 }
@@ -1248,27 +1319,184 @@ background-clip: initial;
     font-size: 1.1rem;
   }
 }
-/* Visitor Counter */
-.visitor-counter {
+/* ========================================
+   PROJECTS — MORE LINK
+======================================== */
+
+.projects-more {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ========================================
+   COMPETITIVE PROGRAMMING SECTION
+======================================== */
+
+.cp {
+  background: var(--bg-primary);
+}
+
+.cp-summary {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.cp-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cp-breakdown {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.cp-platforms {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.cp-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: var(--transition-smooth);
+}
+
+.cp-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 217, 255, 0.12);
+}
+
+.cp-card-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.cp-card-meta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.cp-card-meta li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.cp-card-meta strong {
+  color: var(--text-primary);
+}
+
+.cp-card-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition-smooth);
+}
+
+.cp-card-link:hover {
   gap: 0.75rem;
+}
+
+/* Contest achievements list */
+.cp-achievements-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 0;
+}
+
+.cp-achievement-item {
   background: var(--bg-secondary);
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
   border: 1px solid var(--border-color);
-  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.cp-achievement-item:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.cp-achievement-contest {
+  font-weight: 700;
   font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.cp-achievement-detail {
+  font-size: 0.88rem;
   color: var(--text-secondary);
-}
-
-.visitor-counter i {
-  color: var(--primary);
-  font-size: 1.25rem;
-}
-
-.visitor-counter strong {
-  color: var(--primary);
   font-family: var(--font-mono);
-  font-size: 1.1rem;
+}
+
+/* ========================================
+   ACTIVITIES HEADING
+======================================== */
+
+.activities-title {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin: 2.5rem 0 1.25rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--border-color);
+}
+
+/* ========================================
+   CONTACT — sub-headings (h3 inside contact-text)
+======================================== */
+
+.contact-text h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ========================================
+   RESPONSIVE — CP SECTION
+======================================== */
+
+@media (max-width: 768px) {
+  .cp-platforms,
+  .cp-achievements-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .cp-summary {
+    padding: 1.25rem;
+  }
+  .cp-card {
+    padding: 1.25rem;
+  }
 }
